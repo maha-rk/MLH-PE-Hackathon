@@ -8,6 +8,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    # Force uv to use the same Python installed by setup-python
+    env:
+      UV_PYTHON: python3.12
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -16,6 +20,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Install system dependencies for dbm
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgdbm6 libgdbm-compat4
 
       - name: Install uv
         run: curl -LsSf https://astral.sh/uv/install.sh | sh
