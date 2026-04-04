@@ -8,6 +8,7 @@ dependencies = [
     "psycopg2-binary>=2.9",
     "pytest>=7.0",
     "pytest-cov>=4.0",
+    "dbm>=1.0"
 ]
 
 [build-system]
