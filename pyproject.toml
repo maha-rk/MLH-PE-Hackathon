@@ -13,6 +13,7 @@ dependencies = [
     [tool.pytest.ini_options]
     addopts = [
         "--cov=app",
+        "--cov-report=xml",
         "--cov-fail-under=50"
 ]
 ]
