@@ -22,7 +22,12 @@ def init_db(app):
 
     @app.before_request
     def _db_connect():
+        from flask import request
+    # Skip DB connection for health route
+        if request.path == "/health":
+            return
         db.connect(reuse_if_open=True)
+
 
     @app.teardown_appcontext
     def _db_close(exc):
