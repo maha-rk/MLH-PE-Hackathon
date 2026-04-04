@@ -187,3 +187,4 @@ query = (Product
 - The template uses `teardown_appcontext` for connection cleanup, so connections are closed even when requests fail.
 - Check `.env.example` for all available configuration options.
 # trigger ci
+# trigger
