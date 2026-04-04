@@ -1,19 +1,22 @@
 [project]
-name = "mlh-pe-hackathon"
+name = "pe-hackathon"
 version = "0.1.0"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
-    "faker>=33.0",
-    "flask>=3.1",
+    "Flask>=3.0",
     "peewee>=3.17",
     "psycopg2-binary>=2.9",
-    "pytest>=9.0.2",
-    "pytest-cov>=7.1.0",
-    "python-dotenv>=1.0",
-    [tool.pytest.ini_options]
-    addopts = [
-        "--cov=app",
-        "--cov-report=xml",
-        "--cov-fail-under=50"
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
 ]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--cov=app",
+    "--cov-report=xml",
+    "--cov-fail-under=50"
 ]
