@@ -1,8 +1,16 @@
-def register_routes(app):
-    """Register all route blueprints with the Flask app.
+from .health import health_bp
+from .metrics import metrics_bp
+from .prom_metrics import prom_metrics_bp
+from .users import users_bp
+from .urls import urls_bp
+from .events import events_bp
+from .url_shortener import url_bp   # MUST BE LAST
 
-    Add your blueprints here. Example:
-        from app.routes.products import products_bp
-        app.register_blueprint(products_bp)
-    """
-    pass
+def register_routes(app):
+    app.register_blueprint(health_bp)
+    app.register_blueprint(metrics_bp)
+    app.register_blueprint(prom_metrics_bp)
+    app.register_blueprint(users_bp)
+    app.register_blueprint(urls_bp)
+    app.register_blueprint(events_bp)
+    app.register_blueprint(url_bp)   # /r/<shortcode> ALWAYS last
