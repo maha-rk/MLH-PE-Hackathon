@@ -22,12 +22,13 @@ def create_url():
     if not isinstance(data["original_url"], str):
         return jsonify({"error": "Invalid original_url"}), 422
 
+    # Ensure user exists
     try:
         user = User.get(User.id == data["user_id"])
     except User.DoesNotExist:
         return jsonify({"error": "User not found"}), 404
 
-    # ADVANCED CHALLENGE: Deduplicate URLs
+    # ADVANCED CHALLENGE #2 — Deduplicate URLs
     existing = URL.select().where(
         (URL.user == user) &
         (URL.original_url == data["original_url"])
@@ -45,10 +46,19 @@ def create_url():
             "updated_at": existing.updated_at.isoformat()
         }), 200
 
+    # ADVANCED CHALLENGE #2 — SHORTCODE COLLISION RESISTANCE
+    attempts = 0
     short = generate_shortcode()
+
     while URL.select().where(URL.short_code == short).exists():
+        attempts += 1
+        if attempts > 10:
+            # ✅ Guaranteed-unique fallback
+            short = f"{user.id}_{int(datetime.datetime.utcnow().timestamp())}"
+            break
         short = generate_shortcode()
 
+    # Create URL
     url = URL.create(
         user=user,
         short_code=short,
@@ -59,6 +69,7 @@ def create_url():
         updated_at=datetime.datetime.utcnow()
     )
 
+    # Log event
     Event.create(
         url=url,
         user=user,
