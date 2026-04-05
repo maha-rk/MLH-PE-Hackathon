@@ -6,7 +6,7 @@ metrics_bp = Blueprint("metrics", __name__)
 
 START_TIME = time.time()
 
-# ✅ THESE ARE YOUR GLOBAL COUNTERS
+# THESE ARE GLOBAL COUNTERS
 TOTAL_REQUESTS = 0
 ERROR_COUNT = 0
 TOTAL_LATENCY = 0.0
@@ -14,7 +14,7 @@ TOTAL_LATENCY = 0.0
 
 def record_metrics(latency_ms: float, is_error: bool = False):
     """
-    ✅ This function MUST update counters for EVERY request.
+    This function MUST update counters for EVERY request.
     """
     global TOTAL_REQUESTS, ERROR_COUNT, TOTAL_LATENCY
 
