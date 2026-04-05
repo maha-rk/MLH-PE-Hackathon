@@ -110,19 +110,13 @@ def list_events():
         query = query.where(Event.event_type == event_type)
 
     results = []
-    for e in query:
-        try:
-            details = json.loads(e.details) if e.details else {}
-        except:
-            details = {}
-
+    for event in query:
         results.append({
-            "id": e.id,
-            "url_id": e.url.id,
-            "user_id": e.user.id,
-            "event_type": e.event_type,
-            "timestamp": e.timestamp.isoformat(),
-            "details": details
+            "id": event.id,
+            "url_id": event.url.id,
+            "user_id": event.user.id,
+            "event_type": event.event_type,
+            "details": json.loads(event.details) if event.details else {},
+            "timestamp": event.timestamp.isoformat()
         })
-
     return jsonify(results), 200
