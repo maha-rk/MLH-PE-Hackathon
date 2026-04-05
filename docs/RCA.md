@@ -73,5 +73,3 @@ curl -X PUT -H "Content-Type: application/json" \
 </ul>
 
 <hr/>
-
-<p><b>End of RCA</b></p>
