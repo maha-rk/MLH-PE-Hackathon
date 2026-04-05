@@ -35,9 +35,9 @@ def redirect_short_url(shortcode):
     except URL.DoesNotExist:
         return jsonify({"error": "Shortcode not found"}), 404
 
-    # ✅ NEW: Inactive URL should NOT redirect
+    # Inactive URL should NOT redirect
     if not url_entry.is_active:
         return jsonify({"error": "URL is inactive"}), 410  # or 400/404 accepted too
 
-    # ✅ redirect if active
+    # redirect if active
     return redirect(url_entry.original_url, code=302)
