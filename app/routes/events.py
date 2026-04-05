@@ -7,19 +7,21 @@ import datetime
 
 events_bp = Blueprint("events", __name__)
 
-# CREATE EVENT — POST /events
 @events_bp.route("/events", methods=["POST"])
 def create_event():
     data = request.get_json()
 
-    if not data or "event_type" not in data or "url_id" not in data or "user_id" not in data:
+    required = ["event_type", "url_id", "user_id"]
+    if not data or any(key not in data for key in required):
         return jsonify({"error": "Missing fields"}), 400
 
+    # Validate URL
     try:
         url = URL.get(URL.id == data["url_id"])
     except URL.DoesNotExist:
         return jsonify({"error": "URL not found"}), 404
 
+    # Validate User
     try:
         user = User.get(User.id == data["user_id"])
     except User.DoesNotExist:
@@ -32,8 +34,14 @@ def create_event():
         timestamp=datetime.datetime.utcnow(),
         details=json.dumps(data.get("details", {}))
     )
-
-    return jsonify({"id": ev.id}), 201
+    return jsonify({
+        "id": ev.id,
+        "url_id": url.id,
+        "user_id": user.id,
+        "event_type": ev.event_type,
+        "timestamp": ev.timestamp.isoformat(),
+        "details": data.get("details", {})
+    }), 201
 
 
 # LIST EVENTS — GET /events
@@ -56,8 +64,10 @@ def list_events():
 
     events = []
     for e in query:
+        details = {}
         try:
-            details = json.loads(e.details) if e.details else {}
+            if e.details:
+                details = json.loads(e.details)
         except:
             details = {}
 

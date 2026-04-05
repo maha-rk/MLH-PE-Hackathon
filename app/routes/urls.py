@@ -163,6 +163,17 @@ def update_url(url_id):
         "updated_at": url.updated_at.isoformat()
     }), 200
 
+# DELETE URL — DELETE /urls/<id>
+@urls_bp.route("/urls/<int:url_id>", methods=["DELETE"])
+def delete_url(url_id):
+    try:
+        url = URL.get(URL.id == url_id)
+    except URL.DoesNotExist:
+        return jsonify({"error": "URL not found"}), 404
+
+    url.delete_instance()
+
+    return jsonify({"message": "URL deleted"}), 200
 
 # REDIRECT ENDPOINT REQUIRED BY MLH TESTS
 @urls_bp.route("/urls/<shortcode>/redirect", methods=["GET"])
