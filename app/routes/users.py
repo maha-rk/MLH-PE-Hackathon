@@ -1,8 +1,6 @@
 from flask import Blueprint, request, jsonify
 from app.models.user import User
 import datetime
-import csv
-from io import TextIOWrapper
 
 users_bp = Blueprint("users", __name__)
 
@@ -38,20 +36,20 @@ def list_users():
     per_page = request.args.get("per_page", type=int, default=1000)
 
     query = User.select().paginate(page, per_page)
+    users = []
 
-    users_list = []
     for user in query:
-        users_list.append({
+        users.append({
             "id": user.id,
             "username": user.username,
             "email": user.email,
             "created_at": user.created_at.isoformat()
         })
 
-    return jsonify(users_list), 200
+    return jsonify(users), 200
 
 
-# GET USER BY ID — GET /users/<id>
+# GET USER — GET /users/<id>
 @users_bp.route("/users/<int:user_id>", methods=["GET"])
 def get_user(user_id):
     try:
@@ -71,7 +69,6 @@ def get_user(user_id):
 @users_bp.route("/users/<int:user_id>", methods=["PUT"])
 def update_user(user_id):
     data = request.get_json()
-
     if not data:
         return jsonify({"error": "Request body required"}), 400
 
@@ -100,31 +97,39 @@ def update_user(user_id):
     }), 200
 
 
-# BULK IMPORT — POST /users/bulk
+# DELETE USER — DELETE /users/<id>
+@users_bp.route("/users/<int:user_id>", methods=["DELETE"])
+def delete_user(user_id):
+    try:
+        user = User.get(User.id == user_id)
+    except User.DoesNotExist:
+        return jsonify({"error": "User not found"}), 404
+
+    user.delete_instance()
+
+    return jsonify({"message": "User deleted"}), 200
+
+
+# BULK IMPORT USERS — POST /users/bulk
 @users_bp.route("/users/bulk", methods=["POST"])
 def bulk_import_users():
     if "file" not in request.files:
         return jsonify({"error": "CSV file required"}), 400
 
     file = request.files["file"]
+    text = file.read().decode("utf-8").splitlines()
 
-    # Read CSV file in text mode
-    csv_file = TextIOWrapper(file, encoding="utf-8")
-    reader = csv.DictReader(csv_file)
+    import csv
+    reader = csv.DictReader(text)
 
-    imported = 0
-
+    count = 0
     for row in reader:
-        # Required columns: username, email
-        if "username" not in row or "email" not in row:
-            continue
+        if "username" in row and "email" in row:
+            User.create(
+                username=row["username"],
+                email=row["email"],
+                created_at=datetime.datetime.utcnow()
+            )
+            count += 1
 
-        # Create user
-        User.create(
-            username=row["username"],
-            email=row["email"],
-            created_at=datetime.datetime.utcnow()
-        )
-        imported += 1
-
-    return jsonify({"count": imported}), 200
+    return jsonify({"count": count}), 200

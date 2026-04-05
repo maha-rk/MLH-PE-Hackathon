@@ -1,10 +1,10 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, redirect
 from app.models.url import URL
 from app.models.user import User
+from app.models.event import Event
 from app.utils import generate_shortcode
 import datetime
 import json
-from app.models.event import Event
 
 urls_bp = Blueprint("urls", __name__)
 
@@ -13,28 +13,24 @@ urls_bp = Blueprint("urls", __name__)
 def create_url():
     data = request.get_json()
 
-    # Validate required fields
     if not data or "user_id" not in data or "original_url" not in data:
         return jsonify({"error": "user_id and original_url are required"}), 400
 
-    # Type validation
     if not isinstance(data["user_id"], int):
         return jsonify({"error": "Invalid user_id"}), 422
+
     if not isinstance(data["original_url"], str):
         return jsonify({"error": "Invalid original_url"}), 422
 
-    # Validate user exists
     try:
         user = User.get(User.id == data["user_id"])
     except User.DoesNotExist:
         return jsonify({"error": "User not found"}), 404
 
-    # Unique shortcode
     short = generate_shortcode()
     while URL.select().where(URL.short_code == short).exists():
         short = generate_shortcode()
 
-    # Create URL
     url = URL.create(
         user=user,
         short_code=short,
@@ -45,7 +41,6 @@ def create_url():
         updated_at=datetime.datetime.utcnow()
     )
 
-    # Log event: created
     Event.create(
         url=url,
         user=user,
@@ -71,16 +66,23 @@ def create_url():
 # LIST URLS — GET /urls
 @urls_bp.route("/urls", methods=["GET"])
 def list_urls():
-    user_filter = request.args.get("user_id", type=int)
+    user_id = request.args.get("user_id", type=int)
+    is_active = request.args.get("is_active")
 
-    if user_filter:
-        query = URL.select().where(URL.user == user_filter)
-    else:
-        query = URL.select()
+    query = URL.select()
 
-    urls_list = []
+    if user_id is not None:
+        query = query.where(URL.user == user_id)
+
+    if is_active is not None:
+        if is_active.lower() == "true":
+            query = query.where(URL.is_active == True)
+        if is_active.lower() == "false":
+            query = query.where(URL.is_active == False)
+
+    urls = []
     for url in query:
-        urls_list.append({
+        urls.append({
             "id": url.id,
             "user_id": url.user.id,
             "short_code": url.short_code,
@@ -91,7 +93,7 @@ def list_urls():
             "updated_at": url.updated_at.isoformat()
         })
 
-    return jsonify(urls_list), 200
+    return jsonify(urls), 200
 
 
 # GET URL BY ID — GET /urls/<id>
@@ -118,34 +120,27 @@ def get_url(url_id):
 @urls_bp.route("/urls/<int:url_id>", methods=["PUT"])
 def update_url(url_id):
     data = request.get_json()
-
     if not data:
         return jsonify({"error": "Request body required"}), 400
 
-    # Find URL
     try:
         url = URL.get(URL.id == url_id)
     except URL.DoesNotExist:
         return jsonify({"error": "URL not found"}), 404
 
-    # Validate fields
-    if "title" in data and not isinstance(data["title"], str):
-        return jsonify({"error": "Invalid title"}), 422
-
-    if "is_active" in data and not isinstance(data["is_active"], bool):
-        return jsonify({"error": "Invalid is_active"}), 422
-
-    # Update fields
     if "title" in data:
+        if not isinstance(data["title"], str):
+            return jsonify({"error": "Invalid title"}), 422
         url.title = data["title"]
 
     if "is_active" in data:
+        if not isinstance(data["is_active"], bool):
+            return jsonify({"error": "Invalid is_active"}), 422
         url.is_active = data["is_active"]
 
     url.updated_at = datetime.datetime.utcnow()
     url.save()
 
-    # Log event: updated
     Event.create(
         url=url,
         user=url.user,
@@ -167,3 +162,17 @@ def update_url(url_id):
         "created_at": url.created_at.isoformat(),
         "updated_at": url.updated_at.isoformat()
     }), 200
+
+
+# REDIRECT ENDPOINT REQUIRED BY MLH TESTS
+@urls_bp.route("/urls/<shortcode>/redirect", methods=["GET"])
+def redirect_from_urls(shortcode):
+    try:
+        url = URL.get(URL.short_code == shortcode)
+    except URL.DoesNotExist:
+        return jsonify({"error": "Shortcode not found"}), 404
+
+    if not url.is_active:
+        return jsonify({"error": "URL is inactive"}), 410
+
+    return redirect(url.original_url, code=302)
