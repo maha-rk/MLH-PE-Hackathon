@@ -20,7 +20,7 @@ def prom_metrics():
         if metrics.TOTAL_REQUESTS > 0 else 0
     )
 
-    # ✅ Build output EXACTLY line-by-line
+    # Build output EXACTLY line-by-line
     lines = []
     lines.append(f"flask_app_cpu_percent {cpu}")
     lines.append(f"flask_app_memory_percent {mem}")
