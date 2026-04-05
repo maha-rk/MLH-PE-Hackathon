@@ -12,25 +12,33 @@ events_bp = Blueprint("events", __name__)
 def create_event():
     data = request.get_json()
 
+    # Required fields
     required = ["event_type", "url_id", "user_id"]
     if not data or any(k not in data for k in required):
         return jsonify({"error": "Missing fields"}), 400
 
-    # ADVANCED CHALLENGE: details must be a dict
+    # ADVANCED CHALLENGE: event_type MUST be a non-empty string
+    if not isinstance(data["event_type"], str) or not data["event_type"].strip():
+        return jsonify({"error": "Invalid event_type"}), 400
+
+    # ADVANCED CHALLENGE: details MUST be a dict
     details = data.get("details", {})
     if not isinstance(details, dict):
         return jsonify({"error": "details must be an object"}), 400
 
+    # Validate URL exists
     try:
         url = URL.get(URL.id == data["url_id"])
     except URL.DoesNotExist:
         return jsonify({"error": "URL not found"}), 404
 
+    # Validate user exists
     try:
         user = User.get(User.id == data["user_id"])
     except User.DoesNotExist:
         return jsonify({"error": "User not found"}), 404
 
+    # Create event
     ev = Event.create(
         url=url,
         user=user,
@@ -58,21 +66,24 @@ def list_events():
 
     query = Event.select()
 
+    # Filtering supported by MLH tests
     if url_id is not None:
         query = query.where(Event.url == url_id)
+
     if user_id is not None:
         query = query.where(Event.user == user_id)
+
     if event_type is not None:
         query = query.where(Event.event_type == event_type)
 
-    events = []
+    results = []
     for e in query:
         try:
             details = json.loads(e.details) if e.details else {}
         except:
             details = {}
 
-        events.append({
+        results.append({
             "id": e.id,
             "url_id": e.url.id,
             "user_id": e.user.id,
@@ -81,4 +92,4 @@ def list_events():
             "details": details
         })
 
-    return jsonify(events), 200
+    return jsonify(results), 200
