@@ -7,21 +7,25 @@ import datetime
 
 events_bp = Blueprint("events", __name__)
 
+# CREATE EVENT — POST /events
 @events_bp.route("/events", methods=["POST"])
 def create_event():
     data = request.get_json()
 
     required = ["event_type", "url_id", "user_id"]
-    if not data or any(key not in data for key in required):
+    if not data or any(k not in data for k in required):
         return jsonify({"error": "Missing fields"}), 400
 
-    # Validate URL
+    # ADVANCED CHALLENGE: details must be a dict
+    details = data.get("details", {})
+    if not isinstance(details, dict):
+        return jsonify({"error": "details must be an object"}), 400
+
     try:
         url = URL.get(URL.id == data["url_id"])
     except URL.DoesNotExist:
         return jsonify({"error": "URL not found"}), 404
 
-    # Validate User
     try:
         user = User.get(User.id == data["user_id"])
     except User.DoesNotExist:
@@ -32,15 +36,16 @@ def create_event():
         user=user,
         event_type=data["event_type"],
         timestamp=datetime.datetime.utcnow(),
-        details=json.dumps(data.get("details", {}))
+        details=json.dumps(details)
     )
+
     return jsonify({
         "id": ev.id,
         "url_id": url.id,
         "user_id": user.id,
         "event_type": ev.event_type,
         "timestamp": ev.timestamp.isoformat(),
-        "details": data.get("details", {})
+        "details": details
     }), 201
 
 
@@ -55,19 +60,15 @@ def list_events():
 
     if url_id is not None:
         query = query.where(Event.url == url_id)
-
     if user_id is not None:
         query = query.where(Event.user == user_id)
-
     if event_type is not None:
         query = query.where(Event.event_type == event_type)
 
     events = []
     for e in query:
-        details = {}
         try:
-            if e.details:
-                details = json.loads(e.details)
+            details = json.loads(e.details) if e.details else {}
         except:
             details = {}
 

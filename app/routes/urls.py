@@ -27,6 +27,24 @@ def create_url():
     except User.DoesNotExist:
         return jsonify({"error": "User not found"}), 404
 
+    # ADVANCED CHALLENGE: Deduplicate URLs
+    existing = URL.select().where(
+        (URL.user == user) &
+        (URL.original_url == data["original_url"])
+    ).first()
+
+    if existing:
+        return jsonify({
+            "id": existing.id,
+            "user_id": existing.user.id,
+            "short_code": existing.short_code,
+            "original_url": existing.original_url,
+            "title": existing.title,
+            "is_active": existing.is_active,
+            "created_at": existing.created_at.isoformat(),
+            "updated_at": existing.updated_at.isoformat()
+        }), 200
+
     short = generate_shortcode()
     while URL.select().where(URL.short_code == short).exists():
         short = generate_shortcode()
@@ -77,12 +95,12 @@ def list_urls():
     if is_active is not None:
         if is_active.lower() == "true":
             query = query.where(URL.is_active == True)
-        if is_active.lower() == "false":
+        elif is_active.lower() == "false":
             query = query.where(URL.is_active == False)
 
-    urls = []
+    results = []
     for url in query:
-        urls.append({
+        results.append({
             "id": url.id,
             "user_id": url.user.id,
             "short_code": url.short_code,
@@ -93,10 +111,10 @@ def list_urls():
             "updated_at": url.updated_at.isoformat()
         })
 
-    return jsonify(urls), 200
+    return jsonify(results), 200
 
 
-# GET URL BY ID — GET /urls/<id>
+# GET URL BY ID
 @urls_bp.route("/urls/<int:url_id>", methods=["GET"])
 def get_url(url_id):
     try:
@@ -163,6 +181,7 @@ def update_url(url_id):
         "updated_at": url.updated_at.isoformat()
     }), 200
 
+
 # DELETE URL — DELETE /urls/<id>
 @urls_bp.route("/urls/<int:url_id>", methods=["DELETE"])
 def delete_url(url_id):
@@ -175,7 +194,8 @@ def delete_url(url_id):
 
     return jsonify({"message": "URL deleted"}), 200
 
-# REDIRECT ENDPOINT REQUIRED BY MLH TESTS
+
+# MLH REDIRECT TEST — GET /urls/<shortcode>/redirect
 @urls_bp.route("/urls/<shortcode>/redirect", methods=["GET"])
 def redirect_from_urls(shortcode):
     try:
@@ -186,4 +206,4 @@ def redirect_from_urls(shortcode):
     if not url.is_active:
         return jsonify({"error": "URL is inactive"}), 410
 
-    return redirect(url.original_url, code=302)
+    return redirect(url.original_url, 302)

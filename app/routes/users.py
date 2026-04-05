@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from app.models.user import User
 import datetime
+import csv
 
 users_bp = Blueprint("users", __name__)
 
@@ -49,7 +50,7 @@ def list_users():
     return jsonify(users), 200
 
 
-# GET USER — GET /users/<id>
+# GET USER BY ID
 @users_bp.route("/users/<int:user_id>", methods=["GET"])
 def get_user(user_id):
     try:
@@ -110,7 +111,7 @@ def delete_user(user_id):
     return jsonify({"message": "User deleted"}), 200
 
 
-# BULK IMPORT USERS — POST /users/bulk
+# BULK UPLOAD USERS — POST /users/bulk
 @users_bp.route("/users/bulk", methods=["POST"])
 def bulk_import_users():
     if "file" not in request.files:
@@ -118,8 +119,6 @@ def bulk_import_users():
 
     file = request.files["file"]
     text = file.read().decode("utf-8").splitlines()
-
-    import csv
     reader = csv.DictReader(text)
 
     count = 0

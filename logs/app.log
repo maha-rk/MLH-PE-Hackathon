@@ -19342,3 +19342,283 @@
 {"asctime": "2026-04-05 13:22:00,289", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
 {"asctime": "2026-04-05 13:22:05,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.21004676818847656, "client_ip": "127.0.0.1"}
 {"asctime": "2026-04-05 13:22:05,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:22:10,286", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.6649494171142578, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:22:10,287", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:22:15,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.11205673217773438, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:22:15,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:22:20,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.18310546875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:22:20,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:22:25,279", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2040863037109375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:22:25,280", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:22:30,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.32591819763183594, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:22:30,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:22:35,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20885467529296875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:22:35,276", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:22:40,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1881122589111328, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:22:40,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:22:45,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2040863037109375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:22:45,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:22:50,275", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.202178955078125, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:22:50,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:50] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:22:55,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20384788513183594, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:22:55,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:22:55] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:00,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.22912025451660156, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:00,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:05,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19693374633789062, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:05,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:10,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.23221969604492188, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:10,276", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:15,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2040863037109375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:15,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:20,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.10395050048828125, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:20,272", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:25,279", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.6339550018310547, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:25,280", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:30,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19407272338867188, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:30,279", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:35,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20503997802734375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:35,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:40,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.09417533874511719, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:40,272", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:45,284", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.392913818359375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:45,285", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:50,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1678466796875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:50,276", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:50] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:23:55,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.141143798828125, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:23:55,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:23:55] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:00,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1761913299560547, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:00,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:05,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.14519691467285156, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:05,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:10,281", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.27179718017578125, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:10,281", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:15,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19979476928710938, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:15,276", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:20,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1971721649169922, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:20,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:25,271", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.44083595275878906, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:25,272", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:30,275", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20194053649902344, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:30,276", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:35,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.18596649169921875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:35,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:40,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2129077911376953, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:40,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:45,275", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19884109497070312, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:45,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:50,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1971721649169922, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:50,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:50] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:24:55,290", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.6940364837646484, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:24:55,292", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:24:55] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:00,271", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.23698806762695312, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:00,272", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:05,280", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.3008842468261719, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:05,281", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:10,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20813941955566406, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:10,276", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:15,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20194053649902344, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:15,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:20,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.23603439331054688, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:20,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:25,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1990795135498047, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:25,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:30,279", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.3039836883544922, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:30,280", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:35,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.11992454528808594, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:35,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:40,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.15997886657714844, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:40,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:45,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.40221214294433594, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:45,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:50,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.21719932556152344, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:50,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:50] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:25:55,270", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.21123886108398438, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:25:55,271", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:25:55] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:00,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20694732666015625, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:00,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:05,317", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2429485321044922, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:05,317", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:10,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2620220184326172, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:10,279", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:15,275", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2090930938720703, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:15,276", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:20,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20003318786621094, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:20,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:25,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20194053649902344, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:25,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:30,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20933151245117188, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:30,279", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:35,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.21195411682128906, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:35,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:40,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1900196075439453, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:40,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:45,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2269744873046875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:45,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:50,275", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20813941955566406, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:50,276", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:50] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:26:55,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19693374633789062, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:26:55,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:26:55] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:00,288", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 1.1649131774902344, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:00,296", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:05,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.22029876708984375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:05,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:10,279", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1277923583984375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:10,280", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:15,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.14710426330566406, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:15,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:20,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1990795135498047, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:20,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:25,279", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.164031982421875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:25,279", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:30,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.17690658569335938, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:30,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:35,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2338886260986328, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:35,272", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:40,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2586841583251953, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:40,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:45,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19693374633789062, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:45,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:50,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.202178955078125, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:50,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:50] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:27:55,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2129077911376953, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:27:55,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:27:55] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:00,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2079010009765625, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:00,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:05,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20384788513183594, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:05,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:10,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.13518333435058594, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:10,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:15,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20599365234375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:15,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:20,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2009868621826172, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:20,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:25,279", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.354766845703125, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:25,279", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:30,275", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2009868621826172, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:30,276", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:35,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20599365234375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:35,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:40,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1480579376220703, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:40,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:45,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2090930938720703, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:45,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:50,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19693374633789062, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:50,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:50] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:28:55,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20623207092285156, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:28:55,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:28:55] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:00,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2071857452392578, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:00,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:05,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19097328186035156, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:05,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:10,270", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.09012222290039062, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:10,270", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:15,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.23174285888671875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:15,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:20,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20885467529296875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:20,272", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:25,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19216537475585938, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:25,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:30,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19407272338867188, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:30,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:35,271", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20503997802734375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:35,271", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:40,269", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.164031982421875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:40,270", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:45,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20599365234375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:45,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:50,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.24509429931640625, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:50,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:50] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:29:55,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2148151397705078, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:29:55,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:29:55] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:00,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.21696090698242188, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:00,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:05,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.21409988403320312, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:05,279", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:10,271", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.11301040649414062, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:10,271", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:15,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.26297569274902344, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:15,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:20,271", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2028942108154297, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:20,272", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:25,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.13899803161621094, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:25,280", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:30,271", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1990795135498047, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:30,271", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:35,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19884109497070312, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:35,279", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:40,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.34809112548828125, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:40,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:45,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20503997802734375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:45,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:50,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.18906593322753906, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:50,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:50] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:30:55,271", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.11968612670898438, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:30:55,272", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:30:55] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:00,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.3428459167480469, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:00,279", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:05,287", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.6780624389648438, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:05,288", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:10,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1380443572998047, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:10,276", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:15,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2071857452392578, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:15,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:20,269", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.102996826171875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:20,269", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:25,271", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.11110305786132812, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:25,272", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:30,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.11706352233886719, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:30,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:35,275", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2110004425048828, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:35,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:40,291", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.18525123596191406, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:40,291", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:45,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2040863037109375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:45,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:50,271", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19979476928710938, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:50,271", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:50] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:31:55,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2129077911376953, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:31:55,276", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:31:55] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:00,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.19097328186035156, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:00,279", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:05,276", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1518726348876953, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:05,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:10,280", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.11587142944335938, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:10,280", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:15,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.18405914306640625, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:15,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:20,279", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.34308433532714844, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:20,279", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:25,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2219676971435547, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:25,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:30,270", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.10704994201660156, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:30,270", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:35,273", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2620220184326172, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:35,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:40,272", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.164031982421875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:40,273", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:45,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20599365234375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:45,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:50,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20003318786621094, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:50,275", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:50] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:32:55,282", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.6220340728759766, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:32:55,283", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:32:55] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:33:00,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.22411346435546875, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:33:00,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:33:00] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:33:05,279", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.17571449279785156, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:33:05,280", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:33:05] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:33:10,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.1957416534423828, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:33:10,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:33:10] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:33:15,278", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.21028518676757812, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:33:15,279", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:33:15] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:33:20,284", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.5769729614257812, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:33:20,285", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:33:20] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:33:25,286", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.8380413055419922, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:33:25,288", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:33:25] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:33:30,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.11491775512695312, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:33:30,277", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:33:30] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:33:35,274", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.20503997802734375, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:33:35,274", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:33:35] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:33:40,277", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.2300739288330078, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:33:40,278", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:33:40] \"GET /prom_metrics HTTP/1.1\" 200 -"}
+{"asctime": "2026-04-05 13:33:45,281", "levelname": "INFO", "message": "request_complete", "path": "/prom_metrics", "method": "GET", "status": 200, "latency_ms": 0.35262107849121094, "client_ip": "127.0.0.1"}
+{"asctime": "2026-04-05 13:33:45,281", "levelname": "INFO", "message": "127.0.0.1 - - [05/Apr/2026 13:33:45] \"GET /prom_metrics HTTP/1.1\" 200 -"}
