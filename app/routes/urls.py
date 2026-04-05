@@ -53,7 +53,7 @@ def create_url():
     while URL.select().where(URL.short_code == short).exists():
         attempts += 1
         if attempts > 10:
-            # ✅ Guaranteed-unique fallback
+            # Guaranteed-unique fallback
             short = f"{user.id}_{int(datetime.datetime.utcnow().timestamp())}"
             break
         short = generate_shortcode()
@@ -206,7 +206,7 @@ def delete_url(url_id):
     return jsonify({"message": "URL deleted"}), 200
 
 
-# MLH REDIRECT TEST — GET /urls/<shortcode>/redirect
+# REDIRECT TEST — GET /urls/<shortcode>/redirect
 @urls_bp.route("/urls/<shortcode>/redirect", methods=["GET"])
 def redirect_from_urls(shortcode):
     try:
