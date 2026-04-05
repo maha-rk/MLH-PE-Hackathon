@@ -12,16 +12,15 @@ events_bp = Blueprint("events", __name__)
 def create_event():
     data = request.get_json()
 
-    # Required fields
     required = ["event_type", "url_id", "user_id"]
     if not data or any(k not in data for k in required):
         return jsonify({"error": "Missing fields"}), 400
 
-    # Strict event_type validation
+    # event_type must be a non-empty string
     if not isinstance(data["event_type"], str) or not data["event_type"].strip():
         return jsonify({"error": "Invalid event_type"}), 400
 
-    # Strict details must be an object
+    # details must be an object
     details = data.get("details", {})
     if not isinstance(details, dict):
         return jsonify({"error": "details must be an object"}), 400
@@ -39,7 +38,7 @@ def create_event():
         return jsonify({"error": "User not found"}), 404
 
     # ADVANCED CHALLENGE #2:
-    # "Twin’s Paradox": identical events must not create duplicates
+    # If identical event exists, MERGE details instead of replacing
     existing = (
         Event.select()
         .where(
@@ -51,9 +50,17 @@ def create_event():
     )
 
     if existing:
-        # Update existing event (event merging)
+        # Load existing details
+        try:
+            existing_details = json.loads(existing.details) if existing.details else {}
+        except:
+            existing_details = {}
+
+        # Merge: new keys override old keys
+        merged = {**existing_details, **details}
+
         existing.timestamp = datetime.datetime.utcnow()
-        existing.details = json.dumps(details)
+        existing.details = json.dumps(merged)
         existing.save()
 
         return jsonify({
@@ -62,10 +69,10 @@ def create_event():
             "user_id": user.id,
             "event_type": existing.event_type,
             "timestamp": existing.timestamp.isoformat(),
-            "details": details
+            "details": merged
         }), 200
 
-    # Otherwise create NEW event
+    # Otherwise create new event
     ev = Event.create(
         url=url,
         user=user,
