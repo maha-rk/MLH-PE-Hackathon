@@ -151,5 +151,3 @@ curl -X PUT -H "Content-Type: application/json" \
 </ol>
 
 <hr/>
-
-<p><b>End of Runbook</b></p>
