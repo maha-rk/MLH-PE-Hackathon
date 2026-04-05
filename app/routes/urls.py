@@ -8,33 +8,33 @@ from app.models.event import Event
 
 urls_bp = Blueprint("urls", __name__)
 
-# ✅ CREATE URL — POST /urls
+# CREATE URL — POST /urls
 @urls_bp.route("/urls", methods=["POST"])
 def create_url():
     data = request.get_json()
 
-    # ✅ Validate required fields
+    # Validate required fields
     if not data or "user_id" not in data or "original_url" not in data:
         return jsonify({"error": "user_id and original_url are required"}), 400
 
-    # ✅ Type validation
+    # Type validation
     if not isinstance(data["user_id"], int):
         return jsonify({"error": "Invalid user_id"}), 422
     if not isinstance(data["original_url"], str):
         return jsonify({"error": "Invalid original_url"}), 422
 
-    # ✅ Validate user exists
+    # Validate user exists
     try:
         user = User.get(User.id == data["user_id"])
     except User.DoesNotExist:
         return jsonify({"error": "User not found"}), 404
 
-    # ✅ Unique shortcode
+    # Unique shortcode
     short = generate_shortcode()
     while URL.select().where(URL.short_code == short).exists():
         short = generate_shortcode()
 
-    # ✅ Create URL
+    # Create URL
     url = URL.create(
         user=user,
         short_code=short,
@@ -45,7 +45,7 @@ def create_url():
         updated_at=datetime.datetime.utcnow()
     )
 
-    # ✅ Log event: created
+    # Log event: created
     Event.create(
         url=url,
         user=user,
@@ -68,7 +68,7 @@ def create_url():
     }), 201
 
 
-# ✅ LIST URLS — GET /urls
+# LIST URLS — GET /urls
 @urls_bp.route("/urls", methods=["GET"])
 def list_urls():
     user_filter = request.args.get("user_id", type=int)
@@ -94,7 +94,7 @@ def list_urls():
     return jsonify(urls_list), 200
 
 
-# ✅ GET URL BY ID — GET /urls/<id>
+# GET URL BY ID — GET /urls/<id>
 @urls_bp.route("/urls/<int:url_id>", methods=["GET"])
 def get_url(url_id):
     try:
@@ -114,7 +114,7 @@ def get_url(url_id):
     }), 200
 
 
-# ✅ UPDATE URL — PUT /urls/<id>
+# UPDATE URL — PUT /urls/<id>
 @urls_bp.route("/urls/<int:url_id>", methods=["PUT"])
 def update_url(url_id):
     data = request.get_json()
@@ -122,20 +122,20 @@ def update_url(url_id):
     if not data:
         return jsonify({"error": "Request body required"}), 400
 
-    # ✅ Find URL
+    # Find URL
     try:
         url = URL.get(URL.id == url_id)
     except URL.DoesNotExist:
         return jsonify({"error": "URL not found"}), 404
 
-    # ✅ Validate fields
+    # Validate fields
     if "title" in data and not isinstance(data["title"], str):
         return jsonify({"error": "Invalid title"}), 422
 
     if "is_active" in data and not isinstance(data["is_active"], bool):
         return jsonify({"error": "Invalid is_active"}), 422
 
-    # ✅ Update fields
+    # Update fields
     if "title" in data:
         url.title = data["title"]
 
@@ -145,7 +145,7 @@ def update_url(url_id):
     url.updated_at = datetime.datetime.utcnow()
     url.save()
 
-    # ✅ Log event: updated
+    # Log event: updated
     Event.create(
         url=url,
         user=url.user,

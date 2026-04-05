@@ -6,7 +6,7 @@ from io import TextIOWrapper
 
 users_bp = Blueprint("users", __name__)
 
-# ✅ CREATE USER — POST /users
+# CREATE USER — POST /users
 @users_bp.route("/users", methods=["POST"])
 def create_user():
     data = request.get_json()
@@ -31,7 +31,7 @@ def create_user():
     }), 201
 
 
-# ✅ LIST USERS — GET /users
+# LIST USERS — GET /users
 @users_bp.route("/users", methods=["GET"])
 def list_users():
     page = request.args.get("page", type=int, default=1)
@@ -51,7 +51,7 @@ def list_users():
     return jsonify(users_list), 200
 
 
-# ✅ GET USER BY ID — GET /users/<id>
+# GET USER BY ID — GET /users/<id>
 @users_bp.route("/users/<int:user_id>", methods=["GET"])
 def get_user(user_id):
     try:
@@ -67,7 +67,7 @@ def get_user(user_id):
     }), 200
 
 
-# ✅ UPDATE USER — PUT /users/<id>
+# UPDATE USER — PUT /users/<id>
 @users_bp.route("/users/<int:user_id>", methods=["PUT"])
 def update_user(user_id):
     data = request.get_json()
@@ -100,7 +100,7 @@ def update_user(user_id):
     }), 200
 
 
-# ✅ BULK IMPORT — POST /users/bulk
+# BULK IMPORT — POST /users/bulk
 @users_bp.route("/users/bulk", methods=["POST"])
 def bulk_import_users():
     if "file" not in request.files:
@@ -108,7 +108,7 @@ def bulk_import_users():
 
     file = request.files["file"]
 
-    # ✅ Read CSV file in text mode
+    # Read CSV file in text mode
     csv_file = TextIOWrapper(file, encoding="utf-8")
     reader = csv.DictReader(csv_file)
 

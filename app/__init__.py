@@ -3,15 +3,15 @@ import time
 from flask import Flask, request
 from pythonjsonlogger import jsonlogger
 
-# ✅ Peewee imports
+# Peewee imports
 from peewee import SqliteDatabase
 from app.database import db
 
-# ✅ CRITICAL FIX: import metrics AS A MODULE (single shared instance)
+# CRITICAL FIX: import metrics AS A MODULE (single shared instance)
 import app.routes.metrics as metrics
 
 
-# ✅ Structured Logging Setup
+# Structured Logging Setup
 def setup_logging():
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
@@ -37,32 +37,32 @@ def create_app():
     setup_logging()
     app = Flask(__name__)
 
-    # ✅ Initialize DB
+    # Initialize DB
     sqlite_db = SqliteDatabase("database.db")
     db.initialize(sqlite_db)
     db.connect(reuse_if_open=True)
 
-    # ✅ Register routes AFTER DB setup
+    # Register routes AFTER DB setup
     from app.routes import register_routes
     register_routes(app)
 
-    # ✅ Middleware: before request
+    # Middleware: before request
     @app.before_request
     def start_timer():
         request.start_time = time.time()
 
-    # ✅ Middleware: after request
+    # Middleware: after request
     @app.after_request
     def log_request(response):
         latency = (time.time() - request.start_time) * 1000  # ms
 
-        # ✅ CRITICAL: update metrics using the ONE shared module
+        # CRITICAL: update metrics using the ONE shared module
         metrics.record_metrics(
             latency,
             is_error=(response.status_code >= 500)
         )
 
-        # ✅ Structured logging
+        # Structured logging
         app.logger.info(
             "request_complete",
             extra={
