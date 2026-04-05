@@ -1,191 +1,162 @@
-# MLH PE Hackathon — Flask + Peewee + PostgreSQL Template
+MLH PE Hackathon — URL Shortener and Incident Response Platform
+This project implements a production‑grade URL Shortener using Flask and Peewee ORM, combined with a complete Incident Response (IR) and Documentation suite.
+It includes:
 
-A minimal hackathon starter template. You get the scaffolding and database wiring — you build the models, routes, and CSV loading logic.
-
-**Stack:** Flask · Peewee ORM · PostgreSQL · uv
-
-## Prerequisites
-
-- **uv** — a fast Python package manager that handles Python versions, virtual environments, and dependencies automatically.
-  Install it with:
-  ```bash
-  # macOS / Linux
-  curl -LsSf https://astral.sh/uv/install.sh | sh
-
-  # Windows (PowerShell)
-  powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-  ```
-  For other methods see the [uv installation docs](https://docs.astral.sh/uv/getting-started/installation/).
-- PostgreSQL running locally (you can use Docker or a local instance)
-
-## uv Basics
-
-`uv` manages your Python version, virtual environment, and dependencies automatically — no manual `python -m venv` needed.
-
-| Command | What it does |
-|---------|--------------|
-| `uv sync` | Install all dependencies (creates `.venv` automatically) |
-| `uv run <script>` | Run a script using the project's virtual environment |
-| `uv add <package>` | Add a new dependency |
-| `uv remove <package>` | Remove a dependency |
-
-## Quick Start
-
-```bash
-# 1. Clone the repo
-git clone <repo-url> && cd mlh-pe-hackathon
-
-# 2. Install dependencies
-uv sync
-
-# 3. Create the database
-createdb hackathon_db
-
-# 4. Configure environment
-cp .env.example .env   # edit if your DB credentials differ
-
-# 5. Run the server
-uv run run.py
-
-# 6. Verify
-curl http://localhost:5000/health
-# → {"status":"ok"}
-```
-
-## Project Structure
-
-```
-mlh-pe-hackathon/
-├── app/
-│   ├── __init__.py          # App factory (create_app)
-│   ├── database.py          # DatabaseProxy, BaseModel, connection hooks
-│   ├── models/
-│   │   └── __init__.py      # Import your models here
-│   └── routes/
-│       └── __init__.py      # register_routes() — add blueprints here
-├── .env.example             # DB connection template
-├── .gitignore               # Python + uv gitignore
-├── .python-version          # Pin Python version for uv
-├── pyproject.toml           # Project metadata + dependencies
-├── run.py                   # Entry point: uv run run.py
-└── README.md
-```
-
-## How to Add a Model
-
-1. Create a file in `app/models/`, e.g. `app/models/product.py`:
-
-```python
-from peewee import CharField, DecimalField, IntegerField
-
-from app.database import BaseModel
+REST API for Users, URLs, and Events
+URL creation, listing, updating, deletion, and redirect service
+Users CRUD with CSV bulk import
+Event logging with filtering and merging
+Prometheus metrics exporter
+Grafana Golden Signals dashboard
+Alerting via email
+Full documentation including runbooks and RCA
 
 
-class Product(BaseModel):
-    name = CharField()
-    category = CharField()
-    price = DecimalField(decimal_places=2)
-    stock = IntegerField()
-```
+Features
+URL Shortener
 
-2. Import it in `app/models/__init__.py`:
+Create short URLs with collision‑safe generation
+Redirect via /r/<shortcode>
+Update URL metadata
+Enable/disable URLs
+Deduplicate URLs for each user
+Filter URLs (?user_id=, ?is_active=)
 
-```python
-from app.models.product import Product
-```
+Users API
 
-3. Create the table (run once in a Python shell or a setup script):
+Create users
+List all users
+Retrieve a user by ID
+Update user details
+Delete a user
+CSV bulk import (POST /users/bulk)
 
-```python
-from app.database import db
-from app.models.product import Product
+Events API
 
-db.create_tables([Product])
-```
-
-## How to Add Routes
-
-1. Create a blueprint in `app/routes/`, e.g. `app/routes/products.py`:
-
-```python
-from flask import Blueprint, jsonify
-from playhouse.shortcuts import model_to_dict
-
-from app.models.product import Product
-
-products_bp = Blueprint("products", __name__)
+Log creation and update events
+Manual event creation
+Filtering by URL, user, or event type
+Advanced event merging logic
 
 
-@products_bp.route("/products")
-def list_products():
-    products = Product.select()
-    return jsonify([model_to_dict(p) for p in products])
-```
+Installation
+Install dependencies:
+Shelluv syncShow more lines
+Run the server:
+Shelluv run python run.py``Show more lines
+Health check:
+Shellcurl http://localhost:5003/healthShow more lines
 
-2. Register it in `app/routes/__init__.py`:
+API Documentation
+Users API
+POST    /users
+GET     /users
+GET     /users/<id>
+PUT     /users/<id>
+DELETE  /users/<id>
+POST    /users/bulk
 
-```python
-def register_routes(app):
-    from app.routes.products import products_bp
-    app.register_blueprint(products_bp)
-```
+URLs API
+POST    /urls
+GET     /urls
+GET     /urls?user_id=<id>&is_active=<bool>
+GET     /urls/<id>
+PUT     /urls/<id>
+DELETE  /urls/<id>
+GET     /urls/<shortcode>/redirect
 
-## How to Load CSV Data
+Events API
+POST    /events
+GET     /events
 
-```python
-import csv
-from peewee import chunked
-from app.database import db
-from app.models.product import Product
+Full API documentation is available in docs/API.md.
 
-def load_csv(filepath):
-    with open(filepath, newline="") as f:
-        reader = csv.DictReader(f)
-        rows = list(reader)
+Metrics (Prometheus)
+Metrics endpoint:
+/prom_metrics
 
-    with db.atomic():
-        for batch in chunked(rows, 100):
-            Product.insert_many(batch).execute()
-```
+Exports:
 
-## Useful Peewee Patterns
+flask_app_total_requests
+flask_app_avg_latency_ms
+flask_app_error_count
+CPU and memory usage
 
-```python
-from peewee import fn
-from playhouse.shortcuts import model_to_dict
 
-# Select all
-products = Product.select()
+Grafana Dashboard
+The Golden Signals dashboard includes:
 
-# Filter
-cheap = Product.select().where(Product.price < 10)
+Request volume
+Average latency
+Error count
+Error rate
+CPU usage
+Memory usage
 
-# Get by ID
-p = Product.get_by_id(1)
+Screenshot available in screenshots/dashboard.png.
 
-# Create
-Product.create(name="Widget", category="Tools", price=9.99, stock=50)
+Incident Response Documentation
+Runbook
+Located in docs/RUNBOOK.md.
+Includes:
 
-# Convert to dict (great for JSON responses)
-model_to_dict(p)
+Service downtime procedures
+Error spike handling
+Latency debugging
+Redirect failures
+Database issues
+Recovery workflows
 
-# Aggregations
-avg_price = Product.select(fn.AVG(Product.price)).scalar()
-total = Product.select(fn.SUM(Product.stock)).scalar()
+Root Cause Analysis (RCA)
+Located in docs/RCA.md.
 
-# Group by
-from peewee import fn
-query = (Product
-         .select(Product.category, fn.COUNT(Product.id).alias("count"))
-         .group_by(Product.category))
-```
+Architecture Diagram
+              ┌──────────────────┐
+              │     Frontend     │
+              └──────────┬───────┘
+                         │ HTTP
+               ┌─────────▼────────┐
+               │     Flask API     │
+               │ /users, /urls,    │
+               │ /events, /r/<id>  │
+               └─────────┬────────┘
+                         │ Peewee ORM
+               ┌─────────▼────────┐
+               │    SQLite DB      │
+               └─────────┬────────┘
+                         │ Metrics
+               ┌─────────▼────────┐
+               │    Prometheus     │
+               └─────────┬────────┘
+                         │
+               ┌─────────▼────────┐
+               │     Grafana       │
+               └───────────────────┘
 
-## Tips
 
-- Use `model_to_dict` from `playhouse.shortcuts` to convert model instances to dictionaries for JSON responses.
-- Wrap bulk inserts in `db.atomic()` for transactional safety and performance.
-- The template uses `teardown_appcontext` for connection cleanup, so connections are closed even when requests fail.
-- Check `.env.example` for all available configuration options.
-# trigger ci
-# trigger
-# trigger
+Tech Stack
+
+Python 3.13
+Flask
+Peewee ORM
+SQLite
+Prometheus
+Grafana
+uv package manager
+Docker Compose
+
+
+Project Structure
+MLH-PE-Hackathon/
+│── app/
+│── monitoring/
+│── docs/
+│── screenshots/
+│── run.py
+│── README.md
+│── pyproject.toml
+└── database.db (optional)
+
+
+License
+MIT License.
